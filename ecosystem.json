@@ -1,0 +1,21 @@
+{
+  "apps": [
+    {
+      "name": "testapp",
+      "script": "index.js"
+    }
+  ],
+  "deploy": {
+    "production" : {
+      "user": "",
+      "host": "localhost",
+      "ref": "origin/master",
+      "repo": "git@github.com:austindebruyn/pm2openbraceexample.git",
+      "path": "./deploy",
+      "post-deploy": "secret='2$(8k3n!a' /bin/sh ./post-deploy.sh",
+      "env": {
+        "secret": "2$(8k3n!a"
+      }
+    }
+  }
+}
